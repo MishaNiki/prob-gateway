@@ -1,0 +1,19 @@
+syntax = "proto3";
+package service.echo.v1;
+
+option go_package = "./pb";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service HelloWorldService {
+    rpc HelloWorld(google.protobuf.Empty) returns (HelloWorldResponse) {
+        option (google.api.http) = {
+            get: "/hello"
+        };
+    }
+}
+
+message HelloWorldResponse {
+    string message = 1;
+}
