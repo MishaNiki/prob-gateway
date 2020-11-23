@@ -1,0 +1,3 @@
+bin
+internal/echo/api/pb
+internal/helloworld/api/pb
